@@ -62,7 +62,9 @@ def main():
     order = Order(
 		products,
 		cookies=[],
-  		proxy_pool=["2kpF3S:GP1FUb@147.44.62.127:8000"]
+  		proxy_pool=[
+			# "2kpF3S:GP1FUb@147.44.62.127:8000"
+		]
 	)
 
     # Отправка закза
