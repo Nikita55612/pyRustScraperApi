@@ -51,7 +51,7 @@ def main():
     order = Order(
 		products=[
 			"oz/1596079870",
-		"ym/1732949807-100352880819-5997015",
+			"ym/1732949807-100352880819-5997015",
 			"wb/300365052",
 			"mm/100028286032",
 			"https://www.ozon.ru/product/nozhnitsy-kantselyarskie-21-sm-calligrata-nerzhaveyushchaya-stal-plastik-173091046/",
