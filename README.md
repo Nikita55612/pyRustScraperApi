@@ -17,8 +17,6 @@
 
 ### Установка
 
-Установите библиотеку через pip:
-
 ```bash
 pip install pyRustScraperApi
 ```
