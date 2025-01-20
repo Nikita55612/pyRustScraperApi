@@ -13,7 +13,7 @@ class BaseClient(ABC):
     API_PATH = "/api"
     DEFAULT_BASE_DOMAIN = "https://rustscraper.ru"
 
-    def __init__(self, base_domain: Optional[str] = None, token: Optional[str] = None):
+    def __init__(self, token: Optional[str] = None, base_domain: Optional[str] = None):
         """
         Инициализация базового клиента
         :param base_domain: Базовый домен API (опционально)

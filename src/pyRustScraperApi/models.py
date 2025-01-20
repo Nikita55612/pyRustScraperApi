@@ -23,14 +23,6 @@ class Order:
     proxy_pool: List[str]
     cookies: List[dict]
 
-    def __init__(self, products: List[str], proxy_pool: List[str], cookies: List[dict] | List[str]):
-        self.products = products
-        self.proxy_pool = proxy_pool
-        if isinstance(cookies, List[str]):
-            self.cookies = dict(json.loads(cookies))
-        else:
-            self.cookies = cookies
-
     def as_json(self) -> dict:
         """
         Преобразует объект заказа в JSON формат.

@@ -57,7 +57,7 @@ class Client(BaseClient):
 
         :raises ApiError
         """
-        uri = f"ws://{self.base_domain.split('://')[1]}{self.API_PATH}/task-ws/{order_hash}"
+        uri = f"wss://{self.base_domain.split('://')[1]}{self.API_PATH}/task-ws/{order_hash}"
         with ws_connect_sync(uri, additional_headers=self.headers) as ws:
             while (task := ws.recv()):
                 task_json = json.loads(task)
@@ -108,7 +108,7 @@ class Client(BaseClient):
         :raises ApiError
         """
         res = httpx.get(self._build_url("test-token"))
-        if res.status_code != 200:
+        if res.status_code != 201:
             raise self._handle_error_response(res.status_code, res.text)
         return TokenInfo.from_json(res.json())
 
