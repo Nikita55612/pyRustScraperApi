@@ -10,8 +10,8 @@ class BaseClient(ABC):
     Базовый абстрактный класс для API клиента.
     Определяет общий интерфейс и константы для обоих типов клиентов.
     """
-    API_PATH = "/api/v1"
-    DEFAULT_BASE_DOMAIN = "http://185.204.2.206"
+    API_PATH = "/api"
+    DEFAULT_BASE_DOMAIN = "https://rustscraper.ru"
 
     def __init__(self, base_domain: Optional[str] = None, token: Optional[str] = None):
         """
@@ -20,7 +20,7 @@ class BaseClient(ABC):
         :param token: Токен авторизации (опционально)
         """
         self.base_domain = base_domain or self.DEFAULT_BASE_DOMAIN
-        self.headers = {"Authorization": f"Bearer {token}"} if token else None
+        self.headers = {"Authorization": f"Bearer {token}"} if token else ""
 
     def _build_url(self, endpoint: str) -> str:
         """

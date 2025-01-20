@@ -5,6 +5,7 @@
 from dataclasses import dataclass
 from typing import Optional, List, Dict, Tuple
 from enum import Enum
+import json
 
 
 @dataclass
@@ -21,6 +22,14 @@ class Order:
     products: List[str]
     proxy_pool: List[str]
     cookies: List[dict]
+
+    def __init__(self, products: List[str], proxy_pool: List[str], cookies: List[dict] | List[str]):
+        self.products = products
+        self.proxy_pool = proxy_pool
+        if isinstance(cookies, List[str]):
+            self.cookies = dict(json.loads(cookies))
+        else:
+            self.cookies = cookies
 
     def as_json(self) -> dict:
         """
