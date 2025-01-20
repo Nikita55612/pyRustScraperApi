@@ -1,6 +1,6 @@
 [project]
 name = "pyRustScraperApi"
-version = "1.0.1"
+version = "1.0.4"
 authors = [
     { name="Nikita5612", email="groz.yt56@gmail.com" },
 ]
@@ -29,9 +29,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "http://185.204.2.206"
-Documentation = "http://185.204.2.206/swagger-ui/"
-Repository = "https://github.com/me/spam.git"
+Homepage = "https://rustscraper.ru"
+Documentation = "https://rustscraper.ru/swagger-ui/"
+Repository = "https://github.com/Nikita55612/pyRustScraperApi"
 
 [build-system]
 requires = ["hatchling"]
